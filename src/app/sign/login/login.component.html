@@ -1,0 +1,23 @@
+<h1 class='text-center mt-5'>Login</h1>
+<div class='container'>
+    <form name='loginForm' #loginForm='ngForm' (ngSubmit)='loginForm.valid && onSubmit(loginForm.value)'>
+        <div class='row'>
+            <div class='offset-lg-3 col-lg-6 offset-md-3 col-md-6 col-sm-12 mt-3'>
+                <label>Email</label>
+                <input type="email" class="form-control" name='email' [(ngModel)]='email' required>
+            </div>
+            <div class='offset-lg-3 col-lg-6 offset-md-3 col-md-6 col-sm-12 my-3'>
+                <label>Password</label>
+                <input type="password" class="form-control" name='password' [(ngModel)]='password' required>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class='btn btn-primary' [disabled]='!loginForm.valid'>Login</button>
+        </div>
+    </form>
+    <div class="text-center mt-5">
+        <h6>New User?
+            <button class='btn btn-primary' routerLink='/signup'>SignUp</button>
+        </h6>
+    </div>
+</div>

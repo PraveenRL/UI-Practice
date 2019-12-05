@@ -1,0 +1,8 @@
+
+<h3>Input Decorator</h3>
+<app-child [receiveName] = "name"></app-child>
+
+<h3>Output Decorator</h3>
+<app-child (sendName) = 'receive_Name($event)'> </app-child>
+<h3>{{ outputName }}</h3>
+<router-outlet></router-outlet>

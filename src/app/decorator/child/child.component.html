@@ -1,0 +1,15 @@
+
+<h2>{{ receiveName }}</h2>
+<h2 [textContent]="receiveName"></h2>
+
+<button class="btn btn-primary" (click)="outname()">Output Decorator</button>
+
+<!-- Local Reference -->
+<p #txt>Local Reference</p>
+<p> {{ txt.textContent }} </p>
+<p> {{ txt.textContent }} </p>
+<p> {{ txt.textContent }} </p>
+
+<input #theName name="outputName">
+<button class="btn btn-warning" (click)="local(theName.value)">Local</button>
+<router-outlet></router-outlet>
